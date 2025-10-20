@@ -77,7 +77,7 @@ jobs:
         working-directory: caddy/mercure/
         run: sudo MERCURE_PUBLISHER_JWT_KEY='!ChangeThisMercureHubJWTSecretKey!' MERCURE_SUBSCRIBER_JWT_KEY='!ChangeThisMercureHubJWTSecretKey!' go run -tags=nobadger,nomysql,nopgx main.go start --config ../../dev.Caddyfile
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: "latest"
           cache: "npm"
